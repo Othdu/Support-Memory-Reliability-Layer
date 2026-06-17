@@ -1,0 +1,21 @@
+Context for entity: acct_helios_734 (Account)
+------------------------------------------------------------
+Active facts:
+  - p1_response_hours = 2  [source: evt-1003, reliability: High]
+  - phone_escalation = true  [source: evt-1003, reliability: High]
+  - plan = Enterprise Support  [source: evt-1003, reliability: High]
+  - preference = finance_dashboard_uptime  [source: evt-1020, reliability: Medium]
+
+Other facts considered but NOT active (superseded / stale / ambiguous):
+  - [Superseded] plan = Starter  (Outranked by a higher-trust or more recent source for this fact.)  [source: evt-1001]
+  - [Stale] plan = Starter  (Source explicitly flags itself as an old/stale note; a higher-trust value is active.)  [source: evt-1018]
+
+Related tickets:
+  - ticket_h_734_p1: priority=P1, affected_seats=48, status=resolved, root_cause=cache_invalidation
+  - ticket_h_734_billing: 
+
+Flags - things needing human review before acting on this context:
+  - [IdempotencyConflict] evt-1009 reuses idempotency_key 'idem-1008' with a different body/entity than evt-1008. Needs human review before either is trusted.
+  - [PossibleDuplicate] evt-1005 appears to describe the same real-world occurrence as evt-1004 (content/timing match), but does not share its idempotency_key. Treated as a separate logical event and flagged as a likely duplicate rather than silently merged or silently kept.
+  - [PossibleDuplicate] evt-1008's text claims to be a retry of evt-1004 with 'the same idempotency key', but its actual idempotency_key ('idem-1008') differs from evt-1004's ('idem-1004'). The structured field is trusted over the free-text claim: NOT treated as a confirmed idempotent retry, flagged instead for human review.
+

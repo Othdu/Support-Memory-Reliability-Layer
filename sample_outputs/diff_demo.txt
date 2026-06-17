@@ -1,0 +1,14 @@
+=== Step 1: dotnet run -- diff acct_helios_734  (first run = baseline) ===
+No previous snapshot for acct_helios_734. This context build is the baseline. Snapshot saved.
+
+
+=== Step 2: dotnet run -- diff acct_helios_734  (re-run, nothing changed) ===
+Changes since last context build for acct_helios_734:
+  (no changes)
+
+
+=== Step 3: a new high-reliability event arrives claiming a further plan change (simulated for this demo) ===
+=== Step 4: dotnet run -- diff acct_helios_734  (after the new event) ===
+Changes since last context build for acct_helios_734:
+  ~ CHANGED: plan: Enterprise Support [Active] -> Enterprise Plus [Ambiguous] | Enterprise Support [Ambiguous]
+

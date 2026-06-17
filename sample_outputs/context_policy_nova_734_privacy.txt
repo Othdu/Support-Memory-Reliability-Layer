@@ -1,0 +1,7 @@
+Context for entity: policy_nova_734_privacy (Policy)
+------------------------------------------------------------
+Active facts:
+  - no_cross_account_analytics = true  [source: evt-1011, reliability: High]
+  - no_training = true  [source: evt-1011, reliability: High]
+  - scope_account_id = acct_nova_734  [source: evt-1011, reliability: High]
+

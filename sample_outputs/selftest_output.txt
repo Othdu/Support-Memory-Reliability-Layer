@@ -1,0 +1,12 @@
+PASS  Helios active plan is Enterprise Support (high-reliability contract wins)
+PASS  Later but self-flagged-old Starter claim is marked Stale, not Active
+PASS  Ticket affected_seats resolves to the corrected value 48 (not 42)
+PASS  Mona's active contact preference is email-only-except-P1 (not WhatsApp)
+PASS  Idempotency conflict (idem-1008 reused with a different body) is flagged
+PASS  Text claim 'retry of evt-1004' with a mismatched idempotency_key is flagged, not silently trusted
+PASS  Shared phone number across multiple contacts is flagged as ambiguous identity
+PASS  Delta Stores has no active policy fact derived from the unverified guess
+PASS  Delta Stores' unverified guess is surfaced as an UnverifiedClaim insight, not policy
+PASS  Nova's no-training policy is Active and scoped to its own policy entity
+
+Result: 10 passed, 0 failed.

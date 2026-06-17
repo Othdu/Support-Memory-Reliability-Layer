@@ -1,0 +1,8 @@
+Context for entity: acct_delta_734 (Account)
+------------------------------------------------------------
+Active facts:
+  (none derived for this entity)
+
+Flags - things needing human review before acting on this context:
+  - [UnverifiedClaim] evt-1012 is a low-reliability, unverified guess ("Rep says maybe Delta Stores has the same privacy restriction as Nova, but no contract is attached.") with no contract evidence. Not applied as policy for this account.
+

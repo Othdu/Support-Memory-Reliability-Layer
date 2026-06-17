@@ -1,0 +1,10 @@
+Explain: fact-acct_helios_734-plan-1
+  Entity: acct_helios_734 (Account)
+  Key: plan   Value: Enterprise Support   Status: Active
+  Why: Highest-trust current value for this fact.
+
+  All sources considered for this fact key (most to least trusted):
+   - [Active] Enterprise Support  (event evt-1003, High reliability, 2026-04-02) -- "Signed addendum says Helios upgraded to Enterprise Support effective 2026-04-02. P1 response target is 2 hours. Phone escalation is included."
+   - [Stale] Starter  (event evt-1018, Low reliability, 2026-04-09) -- "Old note from March says Helios was on Starter and had email-only support. This may now be stale because of the April addendum."
+   - [Superseded] Starter  (event evt-1001, Medium reliability, 2026-04-01) -- "Account created: Helios Apps. Segment: mid-market. Region: Cairo. Current plan recorded as Starter."
+
