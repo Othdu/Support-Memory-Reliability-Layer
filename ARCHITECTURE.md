@@ -89,8 +89,10 @@ fragile and wrong here - `ticket_h_734_p1` does not contain `acct_helios_734` as
 - **No real xUnit project.** Avoided specifically to keep the build dependency-free during a
   timed assessment with no guaranteed package-restore access. See `NEXT.md`.
 - **No authentication/multi-tenant concerns.** Out of scope for a local CLI memory layer.
-- **Ambiguous-tie resolution is generic but untested against a real tie.** The seed data
-  happens to have a clean winner in every fact group (corrections, supersede signals, or
-  reliability gaps always break the tie) - the `Ambiguous` status path in `ConflictResolver`
-  is real, working code, but this dataset doesn't happen to exercise it. It's there as a
-  safety net for data this clean doesn't need yet.
+- **Ambiguous-tie resolution is generic, and was verified against a real tie, not just left
+  on paper.** The seed data's own 20 events happen to have a clean winner in every fact group
+  (corrections, supersede signals, or reliability gaps always break the tie). To check the
+  `Ambiguous` path actually works rather than just compiling, I injected a 21st synthetic
+  event - a second high-reliability `plan` claim for Helios with no corroborating signal -
+  and confirmed both competing values came back `Status=Ambiguous` instead of one winning by
+  accident of LINQ ordering. See `sample_outputs/diff_demo.txt`, step 3-4, for the real run.
