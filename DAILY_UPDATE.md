@@ -50,3 +50,6 @@ answers after 4pm Cairo time") never become structured facts in this slice.
 Capture this AI chat log link and push the repo, including `sample_outputs/`. If time remains,
 add a synthetic test case that actually exercises the `Ambiguous` tie-break path in
 `ConflictResolver`, since the seed data doesn't happen to produce a real tie.
+
+## AI usage
+This project was built collaboratively with Claude (Anthropic) in a single extended session. Claude wrote the initial architecture and all source files, built and ran the project in its own sandbox to verify it compiled and the seed data resolved correctly (10/10 self-test checks), then I rebuilt and reran it independently on my own machine to verify. I caught and we fixed a real environment issue together (a NuGet.config file that blocked package restore on my machine). I can walk through every design decision — particularly the trust-scoring logic in ConflictResolver.cs — in detail if asked. Claude.ai does not currently support exporting a single conversation as a public link; full conversation export is account-wide only.
