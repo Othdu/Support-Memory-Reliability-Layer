@@ -17,7 +17,13 @@ the obvious next upgrades - see `NEXT.md`.
 
 ## Requirements
 
-.NET 8 SDK. No internet access needed to build or run.
+The shipped project targets `net9.0` to match a typical current .NET toolchain. Everything
+was actually built, compiled, and run end-to-end against a .NET **8** SDK in the sandbox I
+built this in (it had no network access to fetch a .NET 9 SDK or any NuGet package - more on
+that below). The code itself has zero version-specific syntax, so if `dotnet build` complains
+about a missing SDK/runtime on your machine, just change `<TargetFramework>` in
+`SupportMemoryService.csproj` to whatever major version you have (`net8.0` is known-good).
+No internet access is needed to build or run either way.
 
 ## Setup & run
 
