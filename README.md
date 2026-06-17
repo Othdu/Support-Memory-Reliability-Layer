@@ -17,7 +17,7 @@ the obvious next upgrades - see `NEXT.md`.
 
 ## Requirements
 
-The shipped project targets `net9.0` to match a typical current .NET toolchain. Everything
+The shipped project targets `net8.0` to match a typical current .NET toolchain. Everything
 was actually built, compiled, and run end-to-end against a .NET **8** SDK in the sandbox I
 built this in (it had no network access to fetch a .NET 9 SDK or any NuGet package - more on
 that below). The code itself has zero version-specific syntax, so if `dotnet build` complains
